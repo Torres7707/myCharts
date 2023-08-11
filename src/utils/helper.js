@@ -7,3 +7,11 @@ export function curry(fn) {
 		return curried.bind(null, ...newArgs);
 	};
 }
+
+export function identity(x) {
+	return x;
+}
+
+export function compose(...fns) {
+	return fns.reduce((total, cur) => (x) => cur(total(x)), identity);
+}

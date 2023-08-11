@@ -1,1 +1,1 @@
-export { curry } from "./helper";
+export { curry, identity, compose } from "./helper";
